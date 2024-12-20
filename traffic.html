@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .se{
+        background-color: black;
+        padding: 5px;
+        border-radius: 10px;
+        width: 200px;
+        margin: auto;
+    }
+
+    .three{
+        background-color: white;
+        width: 150px;
+        margin: auto;
+        margin-top: 5px;
+        height: 150px;
+        border-radius: 100%;
+    }
+    button{
+        display: block;
+        margin: auto;
+        background-color: black;
+        color: white;
+        margin-top: 30px;
+        padding: 10px 40px;
+    }
+    .red{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="flex">
+        <div class="se">
+            <div id="red" class="three"></div>
+            <div id="yellow" class="three"></div>
+            <div id="green" class="three"></div>
+        </div>
+    </div>
+    <button onclick="toggleChange()">change</button>
+
+    
+</body>
+</html>
+
+<script>
+    let red = document.getElementById("red")
+    let yellow = document.getElementById("yellow")
+    let green = document.getElementById("green")
+
+
+    function toggleChange(){
+        if(red.style.backgroundColor == "red"){
+            yellow.style.backgroundColor = "yellow"
+            red.style.backgroundColor = "white"
+
+        }
+
+        else if (yellow.style.backgroundColor == "yellow"){
+            green.style.backgroundColor = "green"
+            yellow.style.backgroundColor = "white"
+
+
+        }
+
+        else if ( green.style.backgroundColor == "green"){
+            red.style.backgroundColor = "red"
+              green.style.backgroundColor = "white"
+
+        }
+        else{
+red.style.backgroundColor = "red"
+
+        }
+        
+
+    }
+</script>

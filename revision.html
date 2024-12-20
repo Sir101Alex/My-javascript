@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 name="sam"  class="ogre">Revision</h2>
+    <input type="password" id="pass">
+    <button id="sh" onclick="togglePassword()">show</button>
+</body>
+</html>
+
+<script>
+    let num1 = 25
+    let num2 = 20
+    let pass = document.getElementById("pass")
+    let sh = document.getElementById('sh')
+    let ok = document.getElementsByClassName("ogre")
+    console.log(ok)
+
+    function togglePassword () {
+       if (pass.type == "password"){
+            pass.type = "text"
+            sh.innerHTML = "hide"
+       }
+       else{
+            pass.type = "password"
+            sh.innerHTML = "show"
+
+
+       }
+
+    }
+
+    // if (num1 > num2){
+    //     alert("num1 is greater than num 2")
+    // }
+
+    // else if (num1 == num2){
+    //     alert("num1 is equal to num2")
+    // }
+    // else{
+    //     alert("num1 is less than num2")
+    // }
+</script>

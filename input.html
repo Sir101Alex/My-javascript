@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>Log in</center></h1>
+    <input type="text" placeholder="username" id="username">
+    <input type="password" placeholder="password" id="password">
+    <button id="button" onclick="togglepassword()">show</button>
+    <button onclick="login()">submit</button>
+</body>
+</html>
+
+
+<script>
+    let username = document.getElementById("username")
+    let password = document.getElementById("password")
+    let button = document.getElementById ("button")
+
+
+    function login(){
+        console.log(username.value)
+        console.log(password.value);
+    }
+    function togglepassword() {
+        // alert("working")
+        if (password.type == "password") {
+            password.type = "text"
+            button.innerText = "hide"
+            
+        } else {
+            password.type = "password"
+            button.innerText = "show"
+        }
+        
+    }
+</script>

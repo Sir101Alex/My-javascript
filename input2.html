@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="number">
+    <input id="input2" type="number"><br>
+    <button class="but" onclick="add()">add</button>
+    <button class="but" onclick="substract()">substract</button><br>
+    <button class="but" onclick="mutiply()">mutiply</button>
+    <button class="but" onclick="divide()">divide</button>
+
+</body>
+</html>
+<script>
+    let input1 = document.getElementById ("input1")
+    let input2 = document.getElementById ("input2")
+    console.log(input1);
+    
+    function add() {
+        console.log(input1.value);
+        console.log(input2.value);
+        result = Number(input1.value) + Number(input2.value)
+        console.log(result);
+    }
+    function substract() {
+        console.log(input1.value);
+        console.log(input2.value);
+        result = Number(input1.value) - Number(input2.value)
+        console.log(result);       
+    }
+    function mutiply() {
+        console.log(input1.value);
+        console.log(input2.value);
+        result = Number(input1.value) * Number(input2.value)
+        console.log(result);        
+    }
+    function divide() {
+        console.log(input1.value);
+        console.log(input2.value);
+        result = Number(input1.value) / Number(input2.value)
+        console.log(result);        
+    }
+</script>

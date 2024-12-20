@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    height: 60vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.cal-buttons {
+    text-align: center;
+    justify-items: space-between;
+    margin-top: 2%;
+}
+.but1, .but2, .but3, .but4 {
+    width: 20%;
+    padding: 10px;
+    
+}
+.cal-screen {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.but1, .but2, .but3, .but4 {
+    /* margin-left: 3%; */
+    border: none;
+    background-color: transparent;
+    font-size: 100%;
+    font-weight: bold;
+}
+.firstdiv, .seconddiv, .thirddiv, .fourthdiv {
+    margin-top: 5%;
+}
+.cal {
+    margin-left: 40%;
+    margin-top: 3%;
+    background-color: lightgray;
+    border-radius: 20px;
+    border: solid black;
+}

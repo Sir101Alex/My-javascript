@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main{
+    background-image: url(OIP-removebg-preview.png);
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-color: #f5f5f5ef;
+    /* background-position: center; */
+    height: 100vh;
+    padding: 20px 60px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    justify-content: space-between;
+}
+.hamod{
+    display: flex;
+    gap: 30px;
+    color: #212529;
+    font-weight: 600;
+    align-items: center;
+    
+}
+.buttes{
+    border: none;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: #e9ecef;
+    padding: 16px 48px;
+}
+
+.flex{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emp{
+    font-size: 47px;
+    width: 60%;
+}
+.emp span{
+    font-weight: 600;
+}
+
+.well{
+    width: 60%;
+}
+.inp{
+    width: 100%;
+    border-radius: 999px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.d-flex{
+    display: flex;
+    gap: 10px;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ok{
+    background-color: rgb(250,250,250);
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+    /* box-shadow: rgb(255, 255, 255) -9.1159px -18.2318px 24.3091px 0px, rgb(236, 238, 241) 9.1159px 18.2318px 24.3091px 0px; */
+}
+
+.ok{
+    font-size: 12px;
+    font-weight: 600;
+}
+.el{
+    /* background-color: red; */
+    /* padding: 15px 5px; */
+    height: 40px;
+    margin: auto;
+    width: 60px;
+    border-radius: 100%;
+    text-align: center;
+    margin: 10px auto;
+    box-shadow: rgb(255, 255, 255) -6.98333px -24.4417px 23.2778px 0px, rgb(233, 237, 242) 6.98333px 24.4417px 23.2778px 0px;
+}
+
+.el  img{
+    width: 25px;
+}
+
+.sign {
+    display: block;
+    background-color: rgb(242,101,36);
+    border: none;
+    margin-top: 20px;
+    border-radius: 999px;
+    width: 60%;
+    color: white;
+    padding: 15px;
+}

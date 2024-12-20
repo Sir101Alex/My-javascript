@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="minusOne()">-</button>
+    <h1 id="result"></h1>
+    <button onclick="addOne()">+</button>
+</body>
+</html>
+<script>
+    let number = 0  
+    console.log(number);
+    let show = document.getElementById("result")
+    show.innerText = number + "🤑"
+    function addOne(){
+        // alert("triggered")
+        number++
+        console.log(number)
+        show.innerText = number + "🤑"
+    }
+    function minusOne(){
+        // alert("triggered")
+
+        if (number == 0){
+            alert("you cannot remove again")
+        }
+        else{
+            number--
+        show.innerText= number + "🤑"
+
+        }
+        console.log(number)
+    }
+</script>

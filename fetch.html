@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sen{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .ok{
+        width: 200px;
+        /* background-color: red; */
+        border: 1px solid gray;
+        padding: 20px;
+        /* height: 300px; */
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h2>Our E-commerce</h2>
+    <div class="sen">
+        <div class="sen" id="res"></div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    fetch('https://fakestoreapi.com/products/')
+            .then(res=>res.json())
+            .then(json=>{
+                console.log(json)
+         
+                for (let index = 0; index < json.length; index++) {
+                    document.getElementById("res").innerHTML += `
+                        <div class="ok">
+                            <img width="150" height="150" src="${json[index].image}" />
+                            <p>${json[index].title}</p>
+                            <h4>₦${json[index].price +1000}</h4>
+                            
+                            
+                        </div>     
+                    
+                    `
+                    
+                    
+                }
+             
+
+            })
+            console.log("hello")
+</script>j

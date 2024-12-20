@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .inner{
+        background-color: black;
+        width: 100px;
+        padding: 20px;
+        height: 30vh;
+        margin: auto;
+        border-radius: 50px;
+    }
+    .color {
+        /* padding: 5px; */
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        margin: auto;
+        margin-top: 10px;
+
+    }
+    .stand {
+        height: 40vh;
+        width: 35px;
+        background-color: black;
+        margin: auto;
+        border-radius: 20px;
+    }
+    .order {
+        display: block;
+        margin: auto;
+    }
+
+    .fix{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        font-weight: 800;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="alls">
+        <div class="inner">
+            <div id="red" class="color"></div>
+            <div id="yellow" class="color"></div>
+            <div id="green" class="color"></div>
+        </div>
+
+        <div class="fix" id="ok"></div>
+
+        <div class="stand"></div>
+    </div>
+    <button onclick="automaticTraffic()" class="order"><B>ORDER by AGOZIE <span ></span></B></button>
+</body>
+</html>
+<script>
+    let red = document.getElementById("red")
+    let yellow = document.getElementById("yellow")
+    let green = document.getElementById("green")
+
+// function order(){
+//     if (red.style.backgroundColor == "red"){
+//         yellow.style,backgroundColor = "yellow"
+//         red.style.backgroundColor = "white"
+//     }
+    
+//     else if (yellow.style.backgroundColor == "yellow"){
+//         green.style.backgroundColor = "green"
+//         yellow.style.backgroundColor = "white"
+//     }
+//     else if  (green.style.backgroundColor == "green"){
+//         red.style.backgroundColor = "red"
+//         green.style.backgroundColor = "white"
+//     }
+    
+// }
+
+let ok = document.getElementById("ok")
+
+
+function automaticTraffic(){
+    let timer = 20
+    let timer2 = 20
+    let timeout = null
+    let timeout2 = null
+    
+
+    timeout = setInterval(() => {
+        timer--
+
+        if (timer > 5) {
+            red.style.backgroundColor = 'red'
+
+        }
+
+        else if (timer < 5 && timer > 1){
+            yellow.style.backgroundColor = 'yellow'
+            red.style.backgroundColor = 'white'
+
+        }
+
+        else if (timer < 1) {
+            yellow.style.backgroundColor = 'white'
+             green.style.backgroundColor = "green"
+             clearInterval(timeout)
+
+
+            timeout2 =    setInterval(() => {
+                timer2--
+                console.log(timer2)
+                ok.innerText = timer2
+                if (timer2 > 5){
+                 green.style.backgroundColor = "green"
+
+
+
+                }
+                else if (timer2 < 5 && timer2 > 1){
+            yellow.style.backgroundColor = 'yellow'
+            green.style.backgroundColor = 'white'
+           
+
+        }
+        else if (timer2 <1){
+            yellow.style.backgroundColor = 'white'
+            red.style.backgroundColor = 'red'
+            clearInterval(timeout2)
+            automaticTraffic()
+
+
+
+            
+        }
+                
+             }, 1000);
+
+
+
+            
+        }
+        console.log(timer)
+        ok.innerText = timer
+        
+    }, 1000);
+
+
+}
+
+// automaticTraffic()
+</script>

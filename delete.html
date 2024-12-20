@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator with Delete Button</title>
+  <link rel="stylesheet" href="delete.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled placeholder="0">
+    <div class="buttons">
+      <button onclick="deleteLast()">DEL</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="addToDisplay('7')">7</button>
+      <button onclick="addToDisplay('8')">8</button>
+      <button onclick="addToDisplay('9')">9</button>
+      <button onclick="addToDisplay('/')">/</button>
+      <button onclick="addToDisplay('4')">4</button>
+      <button onclick="addToDisplay('5')">5</button>
+      <button onclick="addToDisplay('6')">6</button>
+      <button onclick="addToDisplay('*')">*</button>
+      <button onclick="addToDisplay('1')">1</button>
+      <button onclick="addToDisplay('2')">2</button>
+      <button onclick="addToDisplay('3')">3</button>
+      <button onclick="addToDisplay('-')">-</button>
+      <button onclick="addToDisplay('0')">0</button>
+      <button onclick="addToDisplay('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="addToDisplay('+')">+</button>
+    </div>
+  </div>
+  <script>
+    // Function to add value to the display
+function addToDisplay(value) {
+  const display = document.getElementById('display');
+  if (display.value === '0') {
+    display.value = value;
+  } else {
+    display.value += value;
+  }
+}
+
+// Function to clear the display
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+// Function to delete the last character
+function deleteLast() {
+  const display = document.getElementById('display');
+  display.value = display.value.slice(0, -1);
+}
+
+// Function to calculate the result
+function calculate() {
+  const display = document.getElementById('display');
+  try {
+    display.value = eval(display.value) || '0';
+  } catch (e) {
+    display.value = 'Error';
+  }
+}
+
+  </script>
+</body>
+</html>

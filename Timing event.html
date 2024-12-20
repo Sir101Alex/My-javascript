@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="clicked()">Click me</button> -->
+    <button id="but" onclick="stop()">Start</button>
+    <div id="show"></div>
+</body>
+</html>
+<script>
+    let int = null
+    let num = 10
+    let show = document.getElementById("show")
+    function clicked() 
+    {
+      int =   setInterval(() => {
+
+            num--
+            console.log(num)
+
+            if (num == 0){
+                clearInterval(int)
+                int = null
+            }
+
+            // alert("clicked")   
+        }, 1000);
+        
+    }
+ 
+
+    function stop() {
+        
+        if (int){
+            document.getElementById("but").innerText = "Start"
+            
+
+
+
+
+
+            clearInterval(int)
+            int = null
+            console.log(int)
+        }
+        else{
+            document.getElementById("but").innerText = "Stop"
+            clicked()
+        }
+        
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+        show.innerText = num
+    }
+    
+    
+</script>

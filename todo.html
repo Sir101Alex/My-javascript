@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="title" placeholder="title" type="text">
+    <input id="description" placeholder="description" type="text">
+    <div id="heloo"></div>
+
+    <button onclick="add()">Add</button>
+</body>
+</html>
+
+<script>
+    let todos = []
+    let title = document.getElementById("title")
+    let description = document.getElementById("description")
+
+    let stringusers = localStorage.getItem("todos")
+    let Allusers = JSON.parse(stringusers)
+    if (Allusers && Allusers.length > 0){
+        users = Allusers
+        console.log(users);
+        
+    }
+
+    function add(){
+        document.getElementById("heloo").innerText = ""
+        let todo = {
+            title: title.value,
+            description: description.value
+        }
+        todos.push(todo)
+        localStorage.setItem('todos', JSON.stringify(todos))
+        alert('Working Sir ALEX')
+        console.log(todos)
+        // console.log(todos[0].title)
+
+        for (let index = 0; index < todos.length; index++) {
+                // console.log(todos[index].title)
+                document.getElementById("heloo").innerHTML += `
+                <div>
+                    <h2>${todos[index].title}</h2>
+                    <p>${todos[index].description}</p>
+                    <p>${todos[index].description}</p>
+                </div>
+                
+                `
+            
+        }
+    }
+</script>

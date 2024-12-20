@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="cal">
+        <input type="text" id="result" class="cal-screen">
+        <div class="cal-buttons">
+            <div class="firstdiv">
+                <button class="but1" onclick="numbervalue('7')">7</button>
+                <button class="but2" onclick="numbervalue('8')">8</button>
+                <button class="but3" onclick="numbervalue('9')">9</button>
+                <button class="but4" onclick="numbervalue('/')">/</button><br>
+            </div>
+
+            <div class="seconddiv">
+                <button class="but1" onclick="numbervalue('4')">4</button>
+                <button class="but2" onclick="numbervalue('5')">5</button>
+                <button class="but3" onclick="numbervalue('6')">6</button>
+                <button class="but4" onclick="numbervalue('*')">*</button>
+            </div>
+
+            <div class="thirddiv">
+                <button class="but1" onclick="numbervalue('1')">1</button>
+                <button class="but2" onclick="numbervalue('2')">2</button>
+                <button class="but3" onclick="numbervalue('3')">3</button>
+                <button class="but4" onclick="numbervalue('-')">-</button>
+            </div>
+
+            <div class="fourthdiv">
+                <button class="but1" onclick="numbervalue('0')">0</button>
+                <button class="but2" onclick="clearResult()">C</button>
+                <button class="but3" onclick="EqualResult()">=</button>
+                <button class="but4" onclick="numbervalue('+')">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let resultScreen = document.getElementById('result');
+
+    function numbervalue(value) {
+            resultScreen.value += value;
+        }
+
+        
+        function clearResult() {
+            resultScreen.value = '';
+        }
+        
+        function EqualResult() {
+            try {
+                resultScreen.value = eval(resultScreen.value);
+            } catch (error) {
+                resultScreen.value = 'Error';
+            }
+        }
+</script>

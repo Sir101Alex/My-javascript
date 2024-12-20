@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .yomade{
+        background-image: url(./7bd0bf4beb90189543c343fc0f9a4b37.jpg);
+        /* background-color: rgba(0, 0, 0, 0.148); */
+        background-blend-mode: darken;
+        background-size: cover;
+        background-position: center;
+        height: 125vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* padding-top: 300px; */
+    }
+    .samuel{
+        width: 30%;
+        margin: auto;
+        padding: 20px;
+        color:  whitesmoke;
+        z-index: 99;
+        height: 95vh;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.701);
+    }
+    .fe{
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .inp{
+        color: white;
+        margin: 5px  25px ;
+        background-color:rgba(248, 248, 255, 0.416);
+        border-radius: 5px;
+        padding: 10px 20px;
+        width: 80%;
+        outline: tomato;
+    }
+
+    .e{
+        text-align: center;
+        margin-top: 50px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .h2{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 30px;
+    }
+    .sign{
+        display: block;
+        margin: auto;
+        background-color: rgba(239, 96, 0, 0.662);
+        color: whitesmoke;
+        padding: 10px 30px;
+        border-radius: 10px;
+        width: 90%;
+        border: none;
+    }
+</style>
+<body>
+    <div class="yomade">
+        <h1 class="e"><img width="100" src="./download-removebg-preview.png" alt=""></h1>
+
+        <div class="samuel">
+            <h2 class="fe">Hello!</h2>
+            <h2 class="h2">Username</h2>
+            <input id="username" type="text" class="inp">
+            <h2 class="h2">Email</h2>
+            <input id="email" type="text" class="inp">
+            <h2 class="h2">Password</h2>
+            <input id="password" type="text" class="inp">
+            <h2 class="item">Names of Items</h2>
+            <input id="item" type="text" class="inp">
+            <h2 class="price">Price</h2>
+            <input id="price" type="text" class="inp">
+            <h2 class="quantity">Quantity</h2>
+            <input id="quantity" type="text" class="inp">
+            <button onclick="signUp()" class="sign">Sign up</button>
+        </div>
+    </div>
+    <div id="mutiplication"></div>
+</body>
+</html>
+
+<script>
+    let users = []
+    let username = document.getElementById("username")
+    let email = document.getElementById("email")
+    let password = document.getElementById("password")
+
+   
+
+    function signUp() {
+        let user = {
+        username: username.value,
+        email: email.value,
+        password: password.value
+    }
+        users.push(user)
+        alert("account created sucessfully")
+        console.log(users)
+        
+    }
+    for (let number = 2; number < 25; number+=1){
+        console.log(number + " times table")
+        for (let second = 1; second < 13; second++){
+            console.log(number + " x " + second + ' = ' +  number * second)
+    }
+    
+    }
+
+
+
+</script>

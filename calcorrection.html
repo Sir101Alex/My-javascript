@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .cal{
+            width: 270px;
+            /* padding: 10px; */
+            text-align: end  ;
+            /* display: flex; */
+            background-color: rgb(6, 5, 5);
+            border-radius: 20px;
+            color: whitesmoke;
+            margin: auto;
+        }
+        .cal button{
+            width: 60px;
+            background-color: transparent;
+            border: none;
+            transition: all ease-in-out .3s;
+
+            color: whitesmoke;
+            height: 60px;
+        }
+        .sam{
+            padding: 20px;
+            background-color: white ;
+            color: black;
+            height: 15px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border: 1px solid black;
+        }
+
+        .cal .blue{
+            background-color: blue;
+        }
+        .cal .blue:hover{
+            background-color: rgb(4, 4, 151);
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-radius: 20px;
+        }
+
+        .v{
+            border-bottom-right-radius: 20px;
+        }
+
+        .cal button:hover{
+            background-color: rgb(53, 52, 52);
+        }
+        .b{
+            border-bottom-left-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    
+    <div class="cal">
+        <div id="result" class="sam"></div>
+       <div class="flex">
+        <button onclick="addNumber(7)">7</button>
+        <button onclick="addNumber(8)">8</button>
+        <button onclick="addNumber(9)">9</button>
+        <button onclick="operator('/')" class="blue">/</button>
+        <button onclick="addNumber(4)">4</button>
+        <button onclick="addNumber(5)">5</button>
+        <button onclick="addNumber(6)">6</button>
+        <button onclick="operator('x')" class="blue">X</button>
+        <button onclick="addNumber(1)">1</button>
+        <button onclick="addNumber(2)">2</button>
+        <button onclick="addNumber(3)">3</button>
+        <button onclick="operator('-')" class="blue">-</button>
+        <button onclick="addNumber(0)" class="b">0</button>
+        <button onclick="del()">C</button>
+        <button onclick="equal()">=</button>
+        <button onclick="operator('+')" class="blue v">+</button>
+       
+    </div>
+       </div>
+</body>
+</html>
+<script>
+    let num1;
+    let num2;
+    let opr;
+    let result = document.getElementById('result')
+
+function addNumber(m){
+    result.innerHTML +=m
+}
+function operator(n){
+    opr = n
+    num1 = result.innerHTML
+    result.innerHTML = ''
+}
+function equal(){
+num2 = result.innerHTML
+
+ if (opr == "+"){
+        result.innerHTML = Number(num1) + Number(num2)
+    }
+else if (opr == "-"){
+    result.innerHTML = Number(num1) - Number(num2)
+}
+else if(opr == "/"){
+     result.innerHTML = Number(num1) / Number(num2)
+}
+else if (opr == "x"){
+    result.innerHTML = Number(num1) * Number(num2)
+}
+}
+function del(){
+    num1 = ' '
+    num2 = ' '
+    opr = ' '
+    result.innerHTML = " "
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    let num1;
+    let num2;
+    let opr;
+    let result = document.getElementById("result")
+
+
+    function addNumber(v){
+        result.innerHTML +=v
+
+    }
+
+
+    function operator (o){
+        opr = o
+        num1 = result.innerHTML
+        result.innerHTML = '    '
+
+    }
+
+    function equal (){
+        num2 = result.innerHTML
+
+        if (opr == "+"){
+            result.innerHTML = Number(num1) + Number(num2)
+        }
+
+        else if (opr == "-"){
+            result.innerHTML = Number(num1) - Number(num2)
+
+        }
+        else if (opr == "/"){
+            result.innerHTML = Number(num1) / Number(num2)
+
+        }
+        else if (opr == "x"){
+            result.innerHTML = Number(num1) * Number(num2)
+
+        }
+
+      
+        
+
+    }
+
+    function del(){
+            num1 = ""
+            num2 = ""
+            opr = ''
+            result.innerHTML = ''
+        }
+
+</script>
+ -->
